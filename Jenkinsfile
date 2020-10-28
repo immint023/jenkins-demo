@@ -1,9 +1,9 @@
 pipeline {
+    agent { docker { image 'node:14' } }
     stages {
         stage('build') {
             steps {
-                echo "Hello world"
-                echo "My name is Minh"
+                sh 'npm --version'
             }
         }
     }
